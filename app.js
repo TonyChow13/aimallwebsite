@@ -62,19 +62,19 @@ renderP5(0);
 
 // ---- spin-dial product selector ----
 const AGENTS = [
-  { name: "SnapX",  sub: "Cloud Vision AI",       role: "MARKETING & MERCHANDISING", accent: "c-cyan",
+  { name: "SnapX",  sub: "Cloud Vision AI",       role: "MARKETING & MERCHANDISING", accent: "c-cyan", page: "products/snapx.html",
     desc: "Cloud-based AI for fast image, text and video processing — the eyes of the merchandising loop.",
     features: ["Shelf Visibility", "Compliance Assurance", "Flexible Integration", "Action-Driven Rewards"] },
-  { name: "EdgeX",  sub: "Edge CCTV AI",           role: "TERMINAL & ENDPOINT EXECUTION", accent: "c-grad",
+  { name: "EdgeX",  sub: "Edge CCTV AI",           role: "TERMINAL & ENDPOINT EXECUTION", accent: "c-grad", page: "products/edgex.html",
     desc: "Edge AI for real-time CCTV video analysis and instant on-device response at the endpoint.",
     features: ["Data Collection & Analysis", "Automatic Operation", "Privacy Protection", "Real-time Alerts"] },
-  { name: "ChatX",  sub: "Enterprise Copilot",     role: "CONVERSATIONAL ANALYTICS", accent: "c-purple",
+  { name: "ChatX",  sub: "Enterprise Copilot",     role: "CONVERSATIONAL ANALYTICS", accent: "c-purple", page: "products/chatx.html",
     desc: "LLMs integrated directly with your enterprise systems for operational conversation and insight.",
     features: ["Data Visualization", "Natural Language Interaction", "Instant Answer", "Data-based Decision"] },
-  { name: "RobotX", sub: "Robot Orchestration",    role: "ROBOT COMMAND CENTER", accent: "c-cyan",
+  { name: "RobotX", sub: "Robot Orchestration",    role: "ROBOT COMMAND CENTER", accent: "c-cyan", page: "products/robotx.html",
     desc: "The commanding center for robot orchestration — coordinating autonomous fleets across the floor.",
     features: ["Fleet Dispatch", "Task Routing", "Sim2Real Control", "Safety Monitoring"] },
-  { name: "FlowX",  sub: "Goods & IoT Workflow",   role: "WORKFLOW ORCHESTRATION", accent: "c-purple",
+  { name: "FlowX",  sub: "Goods & IoT Workflow",   role: "WORKFLOW ORCHESTRATION", accent: "c-purple", page: "products/flowx.html",
     desc: "Orchestrates the workflow of goods and IoT — connecting WMS, ERP and devices end to end.",
     features: ["IoT Orchestration", "Goods Tracking", "WMS / ERP Sync", "Process Automation"] },
 ];
@@ -96,7 +96,7 @@ const AGENTS = [
       `<h3 class="prod-detail__name">${a.sub}</h3>` +
       `<p class="prod-detail__desc">${a.desc}</p>` +
       `<ul class="feat">${a.features.map(f => `<li>${f}</li>`).join("")}</ul>` +
-      `<a href="#contact" class="link">Learn more about ${a.name} →</a>`;
+      `<a href="${a.page}" class="link">Learn more about ${a.name} →</a>`;
     idxEl.innerHTML = `<b>${String(i + 1).padStart(2, "0")}</b> / 0${N}`;
   }
 

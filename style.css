@@ -248,13 +248,30 @@ header.nav { position: sticky; top: 0; z-index: 200;
 
 /* ---- hero ---- */
 .hero { position: relative; padding: 120px 0 96px; overflow: hidden; }
-.hero__glow { position: absolute; top: -180px; left: 50%; transform: translateX(-50%);
-  width: 1100px; height: 720px; pointer-events: none;
-  background:
-    radial-gradient(closest-side, rgba(106,201,214,.22), transparent 70%) -180px 0/60% 100% no-repeat,
-    radial-gradient(closest-side, rgba(139,92,246,.26), transparent 70%) 180px 40px/60% 100% no-repeat;
-  filter: blur(10px); }
-.hero__inner { position: relative; max-width: 1140px; margin: 0 auto; text-align: center; }
+/* living, "breathing" hero background — animated colour blobs */
+.hero__glow { position: absolute; top: -220px; left: 50%; transform: translateX(-50%);
+  width: min(1200px, 120vw); height: 860px; pointer-events: none; z-index: 0; overflow: visible; }
+.hero__glow::before, .hero__glow::after { content: ""; position: absolute; border-radius: 50%;
+  filter: blur(70px); will-change: transform, opacity; }
+.hero__glow::before { width: 620px; height: 500px; left: 12%; top: 40px;
+  background: radial-gradient(closest-side, rgba(106,201,214,.5), transparent 72%);
+  animation: heroBreatheA 15s ease-in-out infinite; }
+.hero__glow::after { width: 680px; height: 560px; right: 10%; top: 10px;
+  background: radial-gradient(closest-side, rgba(139,92,246,.55), transparent 72%);
+  animation: heroBreatheB 19s ease-in-out infinite; }
+@keyframes heroBreatheA {
+  0%,100% { transform: translate(0,0) scale(1); opacity: .55; }
+  50%     { transform: translate(70px, 46px) scale(1.28); opacity: .8; }
+}
+@keyframes heroBreatheB {
+  0%,100% { transform: translate(0,0) scale(1.12); opacity: .5; }
+  50%     { transform: translate(-80px, 34px) scale(.86); opacity: .78; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero__glow::before, .hero__glow::after { animation: none; }
+}
+.hero__inner { position: relative; z-index: 2; max-width: 1140px; margin: 0 auto; text-align: center; }
+.hero__statsbar { position: relative; z-index: 2; }
 .kicker { display: inline-flex; align-items: center; gap: 9px; font-family: "JetBrains Mono", monospace;
   font-size: 12px; letter-spacing: 2px; color: var(--cyan-b); text-transform: uppercase;
   border: 1px solid var(--line-2); border-radius: 999px; padding: 7px 16px; margin-bottom: 28px;
