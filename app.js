@@ -13,7 +13,7 @@ document.querySelectorAll("#navLinks a").forEach(a =>
   a.addEventListener("click", () => document.getElementById("navLinks").classList.remove("open")));
 
 // ---- temporarily disable placeholder links (footer nav columns + case "Read more") ----
-document.querySelectorAll(".footer__col a, .story__overlay, .story__all").forEach((el) => {
+document.querySelectorAll(".footer__col a, .story__all").forEach((el) => {
   const href = el.getAttribute("href") || "";
   if (href.includes("products/")) return;   // product pages are live — keep them clickable
   el.addEventListener("click", (e) => e.preventDefault());
@@ -175,19 +175,19 @@ const AGENTS = [
     { sector: "TOBACCO INDUSTRY",
       title: "90% of tobacco brands in China transform marketing audits — all via AIMALL's AI.",
       desc: "Short description about this case — one or two lines, placeholder for now.",
-      img: "assets/case-tobacco.jpg?v=1" },
+      img: "assets/case-tobacco.jpg?v=1", link: "cases/tobacco.html" },
     { sector: "FMCG & BEVERAGES",
       title: "How FMCG brands stay undefeated in the prime shelf-space battle.",
       desc: "Short description about this case — one or two lines, placeholder for now.",
-      img: "assets/case-fmcg.jpg?v=1" },
+      img: "assets/case-fmcg.jpg?v=1", link: "cases/fmcg.html" },
     { sector: "SUPERMARKET CHAINS",
       title: "Real-time 5P insight fuels smart operations for global retail brands.",
       desc: "Short description about this case — one or two lines, placeholder for now.",
-      img: "assets/case-supermarket.jpg?v=1" },
+      img: "assets/case-supermarket.jpg?v=1", link: "cases/supermarket.html" },
     { sector: "RESTAURANT CHAINS",
       title: "10k+ chain stores master service standardization in 3 months.",
       desc: "Short description about this case — one or two lines, placeholder for now.",
-      img: "assets/case-restaurant.jpg?v=1" },
+      img: "assets/case-restaurant.jpg?v=1", link: "cases/restaurant.html" },
   ];
   const $ = (id) => document.getElementById(id);
   const N = STORIES.length;
@@ -205,6 +205,8 @@ const AGENTS = [
     $("stTitle").textContent = s.title;
     $("stDesc").textContent = s.desc;
     $("stImg").src = s.img;
+    const overlay = document.querySelector(".story__overlay");
+    if (overlay) overlay.href = s.link;
     tabs.forEach(t => t.classList.toggle("is-active", +t.dataset.i === i));
     dots.forEach(d => d.classList.remove("is-active"));
     void dotsWrap.offsetWidth;
