@@ -57,7 +57,9 @@ body > *:not(.grid-bg) { position: relative; z-index: 1; }
 .btn--lg { padding: 15px 32px; font-size: 16px; }
 /* primary: smooth 2-color gradient + dark text + soft glow (matches the "Read more" button) */
 .btn--primary { background: var(--grad); color: #07080b; font-weight: 700;
+  border: 0; padding: 13px 25px;   /* no border → no antialiased edge fringe */
   box-shadow: 0 8px 24px rgba(139,92,246,.35); }
+.btn--primary.btn--lg { padding: 16px 33px; }
 .btn--primary:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(139,92,246,.5); }
 .btn--primary:active { transform: translateY(0); box-shadow: 0 6px 18px rgba(139,92,246,.4); }
 .btn--ghost { background: rgba(255,255,255,.03); color: var(--text); border-color: var(--line-2); }
