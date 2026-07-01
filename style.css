@@ -203,7 +203,7 @@ header.nav { position: sticky; top: 0; z-index: 200;
 
 /* ================= case article ================= */
 .art { padding-bottom: 100px; }
-.art__narrow { max-width: 760px; margin: 0 auto; padding: 0 28px; }
+.art__narrow { max-width: 920px; margin: 0 auto; padding: 0 28px; }
 .art__back { display: inline-block; margin-top: 40px; font-family: "JetBrains Mono", monospace;
   font-size: 13px; letter-spacing: 1px; color: var(--dim); }
 .art__back:hover { color: var(--cyan); }
@@ -215,7 +215,7 @@ header.nav { position: sticky; top: 0; z-index: 200;
 .art__meta { display: flex; flex-wrap: wrap; gap: 8px 20px; font-family: "JetBrains Mono", monospace;
   font-size: 12px; letter-spacing: 1px; color: var(--mute);
   border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 15px 0; }
-.art__hero { max-width: 1080px; margin: 40px auto 0; padding: 0 28px; }
+.art__hero { max-width: 920px; margin: 40px auto 0; padding: 0 28px; }
 .art__hero img { width: 100%; border-radius: 16px; border: 1px solid var(--line-2); display: block;
   aspect-ratio: 16 / 8; object-fit: cover; box-shadow: 0 40px 90px -40px rgba(0,0,0,.9); }
 .art__body { margin-top: 46px; }
