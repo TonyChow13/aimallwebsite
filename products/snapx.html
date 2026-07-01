@@ -1,73 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>SnapX — AIMALL</title>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="../style.css?v=31" />
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../style.css?v=32"/>
+<style>:root{--pp-accent:#6ac9d6;--pp-glow:rgba(106,201,214,.22);}</style>
 </head>
 <body>
 <div class="grid-bg" aria-hidden="true"></div>
 
 <header class="nav" id="top">
   <div class="container nav__inner">
-    <a class="brand" href="../index.html"><img class="brand__logo" src="../assets/logo-white.png?v=1" alt="AIMALL 爱莫科技" /></a>
-    <nav class="nav__links" id="navLinks">
-        <div class="nav__drop">
-          <a href="#">Products <i class="caret">▾</i></a>
-          <div class="nav__menu">
-            <a href="snapx.html">SnapX</a><a href="edgex.html">EdgeX</a><a href="chatx.html">ChatX</a>
-          </div>
-        </div>
-        <a href="../index.html#solutions">Solutions</a>
-        <a href="../index.html#cases">Cases</a>
-        <a href="../index.html#about">About</a>
-        <a href="../index.html#contact">Contact</a>
-    </nav>
+    <a class="brand" href="../index.html"><img class="brand__logo" src="../assets/logo-white.png?v=1" alt="AIMALL 爱莫科技"/></a>
+    <nav class="nav__links" id="navLinks"><div class="nav__drop"><a href="#">Products <i class="caret">▾</i></a><div class="nav__menu"><a href="snapx.html">SnapX</a><a href="edgex.html">EdgeX</a><a href="chatx.html">ChatX</a><a href="robotx.html">RobotX</a><a href="flowx.html">FlowX</a></div></div>
+        <a href="../index.html#solutions">Solutions</a><a href="../index.html#cases">Cases</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a></nav>
     <a href="../index.html#contact" class="btn btn--primary nav__cta">Get Solution</a>
     <button class="nav__toggle" id="navToggle" aria-label="Menu">≡</button>
   </div>
 </header>
 
-<section class="pp">
+<section class="pp-hero">
+  <div class="pp-hero__glow" aria-hidden="true"></div>
   <div class="container">
-    <a href="../index.html#products" class="pp-back mono">← All products</a>
-    <div class="pp-grid">
-      <div class="pp-text">
-        <span class="pp-eyebrow mono c-cyan">CLOUD VISION AI</span>
+    <a href="../index.html#products" class="pp-back">← All products</a>
+    <div class="pp-hero__grid">
+      <div class="pp-hero__text">
+        <span class="pp-eyebrow mono"><span class="pp-eyebrow__dot"></span>MARKETING & MERCHANDISING</span>
         <h1 class="pp-title">SnapX</h1>
-        <p class="pp-sub">Cloud-based AI for fast image, text and video processing.</p>
+        <p class="pp-tagline">Cloud-based AI for fast image, text and video processing.</p>
         <p class="pp-desc">A cloud-mobile platform that empowers brands, retailers and distributors to track shelf execution and ensure real-time in-store compliance at scale.</p>
-        <ul class="pp-feat"><li>Shelf Visibility</li><li>Compliance Assurance</li><li>Flexible Integration</li><li>Action-Driven Rewards</li></ul>
-        <a href="../index.html#contact" class="btn btn--primary btn--lg">Get a Solution</a>
+        <div class="pp-cta"><a href="../index.html#contact" class="btn btn--primary btn--lg">Get a Solution</a><a href="../index.html#products" class="btn btn--ghost btn--lg">See all agents</a></div>
       </div>
-      <div class="pp-media">
-        <video class="pp-video" style="object-fit:contain" src="../assets/snapx.mov?v=1" autoplay loop muted playsinline preload="metadata"></video>
-      </div>
+      <div class="pp-media" data-tag="CLOUD VISION"><video class="pp-vid" src="assets/snapx.mov?v=1" autoplay loop muted playsinline preload="metadata"></video></div>
     </div>
-    <p class="pp-note mono">This is a placeholder page — full SnapX content coming soon.</p>
+  </div>
+</section>
+
+<section class="pp-sec">
+  <div class="container">
+    <p class="pp-sec__eyebrow"><b>01</b> Capabilities</p>
+    <h2 class="pp-sec__title">What SnapX does</h2>
+    <div class="pp-caps"><div class="pp-cap"><span class="pp-cap__n">01</span><h4>Shelf Visibility</h4><p>Continuous planogram compliance, golden-zone ratios and instant out-of-stock alerts.</p></div><div class="pp-cap"><span class="pp-cap__n">02</span><h4>Compliance Assurance</h4><p>Verify every promotion and display is executed exactly as head office intended.</p></div><div class="pp-cap"><span class="pp-cap__n">03</span><h4>Flexible Integration</h4><p>Drops into existing apps and workflows through a lightweight cloud-mobile layer.</p></div><div class="pp-cap"><span class="pp-cap__n">04</span><h4>Action-Driven Rewards</h4><p>Turn detections into field-team tasks and incentives that actually get work done.</p></div></div>
+  </div>
+</section>
+
+<section class="pp-sec pp-sec--panel">
+  <div class="container">
+    <p class="pp-sec__eyebrow"><b>02</b> How it works</p>
+    <h2 class="pp-sec__title">From signal to verified action</h2>
+    <div class="pp-steps"><div class="pp-step"><span class="pp-step__k">CAPTURE</span><h4>Capture</h4><p>Field photos and video are processed in the cloud in seconds.</p></div><div class="pp-step"><span class="pp-step__k">VERIFY</span><h4>Verify</h4><p>Fine-grained models score shelf execution against the plan.</p></div><div class="pp-step"><span class="pp-step__k">REWARD</span><h4>Reward</h4><p>Gaps become tasks; completion is confirmed and incentivised.</p></div></div>
+  </div>
+</section>
+
+<section class="pp-band">
+  <div class="pp-band__glow" aria-hidden="true"></div>
+  <div class="container pp-band__inner">
+    <h2>Ready to deploy SnapX?</h2>
+    <p>Share your scenario and our team will craft a rollout plan for your stores.</p>
+    <a href="../index.html#contact" class="btn btn--primary btn--lg">Get a Solution</a>
   </div>
 </section>
 
 <footer class="footer">
   <div class="container footer__grid">
     <div class="footer__brand">
-      <a class="brand" href="../index.html"><img class="brand__logo" src="../assets/logo-white.png?v=1" alt="AIMALL 爱莫科技" /></a>
+      <a class="brand" href="../index.html"><img class="brand__logo" src="../assets/logo-white.png?v=1" alt="AIMALL 爱莫科技"/></a>
       <p class="footer__tag">Enterprise-level A³V AI Agent for Retail Workflow Process Automation.</p>
       <div class="footer__contact">
         <div class="fcontact"><span class="fcontact__label">Email us at</span><a class="fcontact__val" href="mailto:bd@mail-ai.com">bd@mail-ai.com</a></div>
         <div class="fcontact"><span class="fcontact__label">Call us</span><a class="fcontact__val" href="tel:+864008388188">+ 86 400-8388-188</a></div>
       </div>
     </div>
-    <div class="footer__col"><h5>Products</h5><a href="snapx.html">SnapX</a><a href="edgex.html">EdgeX</a><a href="chatx.html">ChatX</a></div>
+    <div class="footer__col"><h5>Products</h5><a href="snapx.html">SnapX</a><a href="edgex.html">EdgeX</a><a href="chatx.html">ChatX</a><a href="robotx.html">RobotX</a><a href="flowx.html">FlowX</a></div>
     <div class="footer__col"><h5>Company</h5><a href="../index.html#about">About</a><a href="../index.html#cases">Cases</a><a href="../index.html#contact">Contact</a></div>
   </div>
   <div class="container footer__bottom mono">© 2025 AIMALL · 爱莫科技. All rights reserved.</div>
 </footer>
-
 <script>
 document.getElementById("navToggle")?.addEventListener("click",()=>document.getElementById("navLinks").classList.toggle("open"));
 document.querySelectorAll(".nav__drop").forEach(function(d){var t;d.addEventListener("mouseenter",function(){clearTimeout(t);d.classList.add("open");});d.addEventListener("mouseleave",function(){t=setTimeout(function(){d.classList.remove("open");},260);});});
