@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SnapX — AIMALL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../style.css?v=24" />
+</head>
+<body>
+<div class="grid-bg" aria-hidden="true"></div>
+
+<header class="nav" id="top">
+  <div class="container nav__inner">
+    <a class="brand" href="../index.html"><img class="brand__logo" src="../assets/logo-white.png?v=1" alt="AIMALL 爱莫科技" /></a>
+    <nav class="nav__links" id="navLinks">
+        <div class="nav__drop">
+          <a href="#">Products <i class="caret">▾</i></a>
+          <div class="nav__menu">
+            <a href="snapx.html">SnapX</a><a href="edgex.html">EdgeX</a><a href="chatx.html">ChatX</a>
+          </div>
+        </div>
+        <a href="../index.html#solutions">Solutions</a>
+        <a href="../index.html#cases">Cases</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+    </nav>
+    <a href="../index.html#contact" class="btn btn--primary nav__cta">Get Solution</a>
+    <button class="nav__toggle" id="navToggle" aria-label="Menu">≡</button>
+  </div>
+</header>
+
+<section class="pp">
+  <div class="container">
+    <a href="../index.html#products" class="pp-back mono">← All products</a>
+    <div class="pp-grid">
+      <div class="pp-text">
+        <span class="pp-eyebrow mono c-cyan">CLOUD VISION AI</span>
+        <h1 class="pp-title">SnapX</h1>
+        <p class="pp-sub">Cloud-based AI for fast image, text and video processing.</p>
+        <p class="pp-desc">A cloud-mobile platform that empowers brands, retailers and distributors to track shelf execution and ensure real-time in-store compliance at scale.</p>
+        <ul class="pp-feat"><li>Shelf Visibility</li><li>Compliance Assurance</li><li>Flexible Integration</li><li>Action-Driven Rewards</li></ul>
+        <a href="../index.html#contact" class="btn btn--primary btn--lg">Get a Solution</a>
+      </div>
+      <div class="pp-media">
+        <video class="pp-video" style="object-fit:contain" src="../assets/snapx.mov?v=1" autoplay loop muted playsinline preload="metadata"></video>
+      </div>
+    </div>
+    <p class="pp-note mono">This is a placeholder page — full SnapX content coming soon.</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a class="brand" href="../index.html"><img class="brand__logo" src="../assets/logo-white.png?v=1" alt="AIMALL 爱莫科技" /></a>
+      <p class="footer__tag">Enterprise-level A³V AI Agent for Retail Workflow Process Automation.</p>
+      <div class="footer__contact">
+        <div class="fcontact"><span class="fcontact__label">Email us at</span><a class="fcontact__val" href="mailto:bd@mail-ai.com">bd@mail-ai.com</a></div>
+        <div class="fcontact"><span class="fcontact__label">Call us</span><a class="fcontact__val" href="tel:+864008388188">+ 86 400-8388-188</a></div>
+      </div>
+    </div>
+    <div class="footer__col"><h5>Products</h5><a href="snapx.html">SnapX</a><a href="edgex.html">EdgeX</a><a href="chatx.html">ChatX</a></div>
+    <div class="footer__col"><h5>Company</h5><a href="../index.html#about">About</a><a href="../index.html#cases">Cases</a><a href="../index.html#contact">Contact</a></div>
+  </div>
+  <div class="container footer__bottom mono">© 2025 AIMALL · 爱莫科技. All rights reserved.</div>
+</footer>
+
+<script>
+document.getElementById("navToggle")?.addEventListener("click",()=>document.getElementById("navLinks").classList.toggle("open"));
+</script>
+</body>
+</html>

@@ -7,6 +7,8 @@ document.querySelectorAll("#navLinks a").forEach(a =>
 
 // ---- temporarily disable placeholder links (footer nav columns + case "Read more") ----
 document.querySelectorAll(".footer__col a, .story__overlay, .story__all").forEach((el) => {
+  const href = el.getAttribute("href") || "";
+  if (href.includes("products/")) return;   // product pages are live — keep them clickable
   el.addEventListener("click", (e) => e.preventDefault());
   el.style.cursor = "default";
 });
