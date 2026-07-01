@@ -435,11 +435,11 @@ body > *:not(.grid-bg) { position: relative; z-index: 1; }
 
 /* ---- footer ---- */
 .footer { border-top: 1px solid var(--line); padding: 64px 0 28px; background: var(--bg-2); }
-.footer__contact { display: flex; gap: 56px; flex-wrap: wrap; margin-top: 36px; }
-.fcontact { display: flex; flex-direction: column; gap: 12px; }
-.fcontact__label { font-family: "Space Grotesk", sans-serif; font-size: 21px; font-weight: 600; color: #fff; }
-.fcontact__val { font-size: 18px; color: var(--dim); white-space: nowrap; }
-.fcontact__val:hover { color: #fff; }
+.footer__contact { display: flex; gap: 44px; flex-wrap: wrap; margin-top: 26px; }
+.fcontact { display: flex; flex-direction: column; gap: 5px; }
+.fcontact__label { font-size: 14px; font-weight: 600; color: #fff; }
+.fcontact__val { font-size: 14px; color: var(--dim); white-space: nowrap; }
+.fcontact__val:hover { color: var(--cyan); }
 .footer__grid { display: grid; grid-template-columns: 2.5fr 1fr 1fr 1fr 1.1fr; gap: 32px; padding-bottom: 40px; border-bottom: 1px solid var(--line); align-items: start; }
 .footer__tag { color: var(--mute); font-size: 14px; max-width: 260px; margin: 16px 0 0; }
 .footer__col { display: flex; flex-direction: column; gap: 10px; }
