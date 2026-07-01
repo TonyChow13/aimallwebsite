@@ -249,8 +249,8 @@ header.nav { position: sticky; top: 0; z-index: 200;
 /* ---- hero ---- */
 .hero { position: relative; padding: 120px 0 96px; overflow: hidden; }
 /* living, "breathing" hero background — animated colour blobs */
-.hero__glow { position: absolute; top: -220px; left: 50%; transform: translateX(-50%);
-  width: min(1200px, 120vw); height: 860px; pointer-events: none; z-index: 0; overflow: visible; }
+.hero__glow { position: absolute; top: -140px; left: 50%; transform: translateX(-50%);
+  width: min(1200px, 120vw); height: 960px; pointer-events: none; z-index: 0; overflow: visible; }
 .hero__glow::before, .hero__glow::after { content: ""; position: absolute; border-radius: 50%;
   filter: blur(70px); will-change: transform, opacity; }
 .hero__glow::before { width: 620px; height: 500px; left: 12%; top: 40px;
@@ -261,18 +261,18 @@ header.nav { position: sticky; top: 0; z-index: 200;
   animation: heroBreatheB 11s ease-in-out infinite; }
 /* wander to several different spots so the colour roams, not just pulses in place */
 @keyframes heroBreatheA {
-  0%   { transform: translate(0,0) scale(1); opacity: .5; }
-  25%  { transform: translate(220px, 70px) scale(1.3); opacity: .82; }
-  50%  { transform: translate(120px, -60px) scale(.9); opacity: .62; }
-  75%  { transform: translate(-160px, 50px) scale(1.18); opacity: .8; }
-  100% { transform: translate(0,0) scale(1); opacity: .5; }
+  0%   { transform: translate(0,40px) scale(1); opacity: .5; }
+  25%  { transform: translate(220px, 190px) scale(1.3); opacity: .82; }
+  50%  { transform: translate(120px, 60px) scale(.9); opacity: .62; }
+  75%  { transform: translate(-160px, 170px) scale(1.18); opacity: .8; }
+  100% { transform: translate(0,40px) scale(1); opacity: .5; }
 }
 @keyframes heroBreatheB {
-  0%   { transform: translate(0,0) scale(1.1); opacity: .5; }
-  25%  { transform: translate(-200px, -50px) scale(.85); opacity: .75; }
-  50%  { transform: translate(-90px, 80px) scale(1.28); opacity: .82; }
-  75%  { transform: translate(180px, -30px) scale(.95); opacity: .68; }
-  100% { transform: translate(0,0) scale(1.1); opacity: .5; }
+  0%   { transform: translate(0,40px) scale(1.1); opacity: .5; }
+  25%  { transform: translate(-200px, 90px) scale(.85); opacity: .75; }
+  50%  { transform: translate(-90px, 210px) scale(1.28); opacity: .82; }
+  75%  { transform: translate(180px, 110px) scale(.95); opacity: .68; }
+  100% { transform: translate(0,40px) scale(1.1); opacity: .5; }
 }
 @media (prefers-reduced-motion: reduce) {
   .hero__glow::before, .hero__glow::after { animation: none; }
@@ -317,7 +317,7 @@ header.nav { position: sticky; top: 0; z-index: 200;
   -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 70px, #000 calc(100% - 70px), transparent 100%);
           mask-image: linear-gradient(90deg, transparent 0, #000 70px, #000 calc(100% - 70px), transparent 100%); }
 .marquee__track { display: flex; gap: 56px; white-space: nowrap; width: max-content;
-  animation: scroll 76s linear infinite; }
+  animation: scroll 200s linear infinite; }
 .marquee__track span { font-family: "JetBrains Mono", monospace; font-size: 14px; letter-spacing: 2px;
   color: var(--mute); }
 @keyframes scroll { to { transform: translateX(-50%); } }
