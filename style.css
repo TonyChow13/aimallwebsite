@@ -310,7 +310,7 @@ header.nav { position: sticky; top: 0; z-index: 200;
   -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 70px, #000 calc(100% - 70px), transparent 100%);
           mask-image: linear-gradient(90deg, transparent 0, #000 70px, #000 calc(100% - 70px), transparent 100%); }
 .marquee__track { display: flex; gap: 56px; white-space: nowrap; width: max-content;
-  animation: scroll 38s linear infinite; }
+  animation: scroll 76s linear infinite; }
 .marquee__track span { font-family: "JetBrains Mono", monospace; font-size: 14px; letter-spacing: 2px;
   color: var(--mute); }
 @keyframes scroll { to { transform: translateX(-50%); } }
