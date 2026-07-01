@@ -82,8 +82,9 @@ body > *:not(.grid-bg) { position: relative; z-index: 1; }
   background: var(--bg-2); border: 1px solid var(--line-2); border-radius: 12px;
   display: flex; flex-direction: column; gap: 2px; box-shadow: 0 22px 55px rgba(0,0,0,.55);
   opacity: 0; visibility: hidden; transition: opacity .16s ease, transform .16s ease; }
-.nav__menu::before { content: ""; position: absolute; left: 0; right: 0; top: -12px; height: 12px; }  /* hover bridge */
-.nav__drop:hover .nav__menu { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+.nav__menu::before { content: ""; position: absolute; left: -20px; right: -20px; top: -14px; height: 16px; }  /* hover bridge */
+.nav__drop:hover .nav__menu,
+.nav__drop.open .nav__menu { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
 .nav__menu a { padding: 10px 14px; border-radius: 8px; font-size: 14px; color: var(--dim); white-space: nowrap; }
 .nav__menu a:hover { background: rgba(255,255,255,.06); color: #fff; }
 

@@ -2,6 +2,13 @@
 document.getElementById("navToggle")?.addEventListener("click", () => {
   document.getElementById("navLinks").classList.toggle("open");
 });
+
+// ---- products dropdown: keep open briefly so you can move to the items ----
+document.querySelectorAll(".nav__drop").forEach((drop) => {
+  let t;
+  drop.addEventListener("mouseenter", () => { clearTimeout(t); drop.classList.add("open"); });
+  drop.addEventListener("mouseleave", () => { t = setTimeout(() => drop.classList.remove("open"), 260); });
+});
 document.querySelectorAll("#navLinks a").forEach(a =>
   a.addEventListener("click", () => document.getElementById("navLinks").classList.remove("open")));
 
