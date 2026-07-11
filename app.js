@@ -77,6 +77,9 @@ const AGENTS = [
   { name: "FlowX",  sub: "Goods & IoT Workflow",   role: "WORKFLOW ORCHESTRATION", accent: "c-purple", page: "products/flowx.html",
     desc: "Orchestrates the workflow of goods and IoT — connecting WMS, ERP and devices end to end.",
     features: ["IoT Orchestration", "Goods Tracking", "WMS / ERP Sync", "Process Automation"] },
+  { name: "GenX",   sub: "Design AI Box",          role: "GENERATIVE DESIGN", accent: "c-cyan", page: "products/genx.html",
+    desc: "Generative AI that turns a text brief into on-brand packaging, POSM and key visuals in one pass.",
+    features: ["Brief to Design", "Brand-Consistent", "Packaging & POSM", "Iterate Instantly"] },
 ];
 
 (function initCover() {
@@ -174,19 +177,19 @@ const AGENTS = [
   const STORIES = [
     { sector: "TOBACCO INDUSTRY",
       title: "90% of tobacco brands in China transform marketing audits — all via AIMALL's AI.",
-      desc: "Short description about this case — one or two lines, placeholder for now.",
+      desc: "SKU-level planogram audits lifted accuracy from 60% to over 95% and cut store-visit time by 80%.",
       img: "assets/case-tobacco.jpg?v=1", link: "cases/tobacco.html" },
     { sector: "FMCG & BEVERAGES",
       title: "How FMCG brands stay undefeated in the prime shelf-space battle.",
-      desc: "Short description about this case — one or two lines, placeholder for now.",
+      desc: "Tracks on-shelf availability, share of shelf and golden-zone ratio so FMCG brands hold their spot on the shelf.",
       img: "assets/case-fmcg.jpg?v=1", link: "cases/fmcg.html" },
     { sector: "SUPERMARKET CHAINS",
       title: "Real-time 5P insight fuels smart operations for global retail brands.",
-      desc: "Short description about this case — one or two lines, placeholder for now.",
+      desc: "One 5P layer across Product, People, Place, Process and Performance that turns existing store cameras into live operational data.",
       img: "assets/case-supermarket.jpg?v=1", link: "cases/supermarket.html" },
     { sector: "RESTAURANT CHAINS",
       title: "10k+ chain stores master service standardization in 3 months.",
-      desc: "Short description about this case — one or two lines, placeholder for now.",
+      desc: "SOP checks across thousands of stores. Hygiene, service and safety issues get flagged automatically, with alerts in under five seconds.",
       img: "assets/case-restaurant.jpg?v=1", link: "cases/restaurant.html" },
   ];
   const $ = (id) => document.getElementById(id);

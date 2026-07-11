@@ -172,6 +172,15 @@ header.nav { position: sticky; top: 0; z-index: 200;
 .ph-media::before { content: attr(data-kind); position: absolute; top: 12px; left: 12px;
   font-family: "JetBrains Mono", monospace; font-size: 10px; letter-spacing: 2px; color: var(--pp-accent, var(--cyan));
   border: 1px solid var(--line-2); border-radius: 6px; padding: 4px 8px; }
+/* real product screenshot / photo tile (replaces .ph-media placeholders) */
+.pp-shot { position: relative; border: 1px solid var(--line-2); border-radius: 16px; overflow: hidden;
+  aspect-ratio: 16 / 10; background: var(--bg-3); }
+.pp-shot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.pp-shot[data-kind]::before { content: attr(data-kind); position: absolute; top: 12px; left: 12px; z-index: 2;
+  font-family: "JetBrains Mono", monospace; font-size: 10px; letter-spacing: 2px; color: #fff;
+  background: rgba(8,10,16,.6); backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,.14); border-radius: 6px; padding: 4px 8px; }
+.ph-gallery .pp-shot { aspect-ratio: 4 / 3; }
 
 .pp-split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
 .pp-split--rev .pp-split__text { order: 2; }
