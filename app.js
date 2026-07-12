@@ -12,31 +12,23 @@ document.querySelectorAll(".nav__drop").forEach((drop) => {
 document.querySelectorAll("#navLinks a").forEach(a =>
   a.addEventListener("click", () => document.getElementById("navLinks").classList.remove("open")));
 
-// ---- temporarily disable placeholder links (footer nav columns + case "Read more") ----
-document.querySelectorAll(".footer__col a, .story__all").forEach((el) => {
-  const href = el.getAttribute("href") || "";
-  if (href.includes("products/")) return;   // product pages are live — keep them clickable
-  el.addEventListener("click", (e) => e.preventDefault());
-  el.style.cursor = "default";
-});
-
 // ---- 5P solutions data (from the live site) ----
 const P5 = [
-  { title: "Tracking Product within seconds", meta: "REAL-TIME · FMCG & CHAIN STORE",
-    chips: [["Facings-per-SKU","FMCG"],["On-shelf-Availability","FMCG"],["POSM","FMCG & CHAIN"],
+  { title: "Tracking products within seconds", meta: "REAL-TIME · FMCG & CHAIN STORE",
+    chips: [["Facings-per-SKU","FMCG"],["On-Shelf Availability","FMCG"],["POSM","FMCG & CHAIN"],
             ["Price Tag","FMCG & CHAIN"],["Inventory","FMCG & CHAIN"],["Out-of-Stock","CHAIN STORE"],
             ["SKU Placement Error","CHAIN STORE"]] },
   { title: "Serving people by knowing people", meta: "BEHAVIOR · CHAIN STORE",
     chips: [["Customer Insight","CHAIN STORE"],["Heatmap","CHAIN STORE"],["Shoplifting","CHAIN STORE"],
             ["Intruder","CHAIN STORE"],["Queue","CHAIN STORE"],["Uniform","CHAIN STORE"],["Meat Flipping","CHAIN STORE"]] },
-  { title: "Avoiding any risk in every place", meta: "SAFETY · CHAIN STORE",
-    chips: [["Mouse","CHAIN STORE"],["Garbage","CHAIN STORE"],["Fire & Smoke","CHAIN STORE"],
+  { title: "Preventing risks in every place", meta: "SAFETY · CHAIN STORE",
+    chips: [["Rodent","CHAIN STORE"],["Garbage","CHAIN STORE"],["Fire & Smoke","CHAIN STORE"],
             ["Cash Room","CHAIN STORE"],["Cart Area","CHAIN STORE"],["Blockage","CHAIN STORE"]] },
-  { title: "Following standard operating process", meta: "COMPLIANCE · CHAIN STORE",
+  { title: "Following standard operating processes", meta: "COMPLIANCE · CHAIN STORE",
     chips: [["Checkout Fraud","CHAIN STORE"],["Checkout Item-Count","CHAIN STORE"],["Checkout Staff-Presence","CHAIN STORE"],
             ["O2O SOPs","CHAIN STORE"],["Customize for Your SOPs","ANY"]] },
   { title: "Evaluating real-time store performance", meta: "ANALYTICS · HQ & STORE",
-    chips: [["HQ ChatBI","Talk directly with your data"],["Store Manager Terminal","Track KPI in real time"],
+    chips: [["HQ ChatBI","Talk directly with your data"],["Store Manager Terminal","Track KPIs in real time"],
             ["Staff Alert via App/API","Quick corrective actions"]] },
 ];
 
@@ -66,16 +58,16 @@ const AGENTS = [
     desc: "Cloud-based AI for fast image, text and video processing — the eyes of the merchandising loop.",
     features: ["Shelf Visibility", "Compliance Assurance", "Flexible Integration", "Action-Driven Rewards"] },
   { name: "EdgeX",  sub: "Edge CCTV AI",           role: "TERMINAL & ENDPOINT EXECUTION", accent: "c-grad", page: "products/edgex.html",
-    desc: "Edge AI for real-time CCTV video analysis and instant on-device response at the endpoint.",
+    desc: "Edge AI for real-time CCTV video analysis and instant on-device response.",
     features: ["Data Collection & Analysis", "Automatic Operation", "Privacy Protection", "Real-time Alerts"] },
   { name: "ChatX",  sub: "Enterprise Copilot",     role: "CONVERSATIONAL ANALYTICS", accent: "c-purple", page: "products/chatx.html",
-    desc: "LLMs integrated directly with your enterprise systems for operational conversation and insight.",
-    features: ["Data Visualization", "Natural Language Interaction", "Instant Answer", "Data-based Decision"] },
+    desc: "LLMs integrated directly with your enterprise systems so teams can query operations in plain language.",
+    features: ["Data Visualization", "Natural Language Interaction", "Instant Answers", "Data-Driven Decisions"] },
   { name: "RobotX", sub: "Robot Orchestration",    role: "ROBOT COMMAND CENTER", accent: "c-cyan", page: "products/robotx.html",
-    desc: "The commanding center for robot orchestration — coordinating autonomous fleets across the floor.",
+    desc: "Coordinates autonomous robot fleets across the store floor: dispatch, routing and safety monitoring in one place.",
     features: ["Fleet Dispatch", "Task Routing", "Sim2Real Control", "Safety Monitoring"] },
   { name: "FlowX",  sub: "Goods & IoT Workflow",   role: "WORKFLOW ORCHESTRATION", accent: "c-purple", page: "products/flowx.html",
-    desc: "Orchestrates the workflow of goods and IoT — connecting WMS, ERP and devices end to end.",
+    desc: "Orchestrates goods and IoT workflows, connecting WMS, ERP and devices end to end.",
     features: ["IoT Orchestration", "Goods Tracking", "WMS / ERP Sync", "Process Automation"] },
   { name: "GenX",   sub: "Design AI Box",          role: "GENERATIVE DESIGN", accent: "c-cyan", page: "products/genx.html",
     desc: "Generative AI that turns a text brief into on-brand packaging, POSM and key visuals in one pass.",
@@ -176,19 +168,19 @@ const AGENTS = [
   const ROTATE_MS = 6000;
   const STORIES = [
     { sector: "TOBACCO INDUSTRY",
-      title: "90% of tobacco brands in China transform marketing audits — all via AIMALL's AI.",
+      title: "90%+ of China's tobacco brands run their marketing audits on AIMALL's AI.",
       desc: "SKU-level planogram audits lifted accuracy from 60% to over 95% and cut store-visit time by 80%.",
       img: "assets/case-tobacco.jpg?v=1", link: "cases/tobacco.html" },
     { sector: "FMCG & BEVERAGES",
-      title: "How FMCG brands stay undefeated in the prime shelf-space battle.",
+      title: "How FMCG brands win the battle for prime shelf space.",
       desc: "Tracks on-shelf availability, share of shelf and golden-zone ratio so FMCG brands hold their spot on the shelf.",
       img: "assets/case-fmcg.jpg?v=1", link: "cases/fmcg.html" },
     { sector: "SUPERMARKET CHAINS",
       title: "Real-time 5P insight fuels smart operations for global retail brands.",
-      desc: "One 5P layer across Product, People, Place, Process and Performance that turns existing store cameras into live operational data.",
+      desc: "One 5P layer across Product, People, Place, Process and Performance turns existing store camera feeds into live operational data.",
       img: "assets/case-supermarket.jpg?v=1", link: "cases/supermarket.html" },
     { sector: "RESTAURANT CHAINS",
-      title: "10k+ chain stores master service standardization in 3 months.",
+      title: "How a restaurant chain standardized service across 10,000+ stores in three months.",
       desc: "SOP checks across thousands of stores. Hygiene, service and safety issues get flagged automatically, with alerts in under five seconds.",
       img: "assets/case-restaurant.jpg?v=1", link: "cases/restaurant.html" },
   ];
